@@ -1,0 +1,36 @@
+""" Emily is a data analyst working for a company that collects feedback from customers in the form of text messages. As part of her data validation tasks, Emily needs to perform two operations on each message:
+
+
+
+Calculate the sum of all the digits mentioned in the message.
+If the sum of the digits is greater than 9, check whether the sum forms a palindrome number.
+
+
+Your task is to help Emily automate this process by writing a program that extracts all digits from a given message, calculates their sum, and checks if the sum is a palindrome if it is greater than 9.
+
+Input format :
+The input consists of a string s, representing the customer message, which may contain letters, digits, spaces, and other characters.
+
+Output format :
+The output prints an integer representing the sum of all digits in the string, followed by a space.
+
+
+
+If the sum is greater than 9, print "Palindrome" if the sum is a palindrome, otherwise print "Not palindrome".
+
+If the sum is less than or equal to 9, no palindrome check is required."""
+
+s=input()
+sum1=0
+
+for ch in s:
+    if ch.isdigit():
+        sum1=sum1+int(ch)
+print(sum1, end=' ')
+    
+if sum1>9:
+    s=str(sum1)
+    if s==s[::-1]:
+        print("Palindrome")
+    else:
+        print("Not palindrome")
